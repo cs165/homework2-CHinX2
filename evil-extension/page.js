@@ -19,10 +19,10 @@ function transformTextNodes(node) {
     var words = text.split(' '); // split by space
     for(var i=0 ; i < words.length ; i++)
     {
-      console.log(words[i]);
       var tmp = words[i].replace(/\s+/g, ''); //remove exp
       if(MATCH_LIST[tmp])
       {
+        console.log(words[i]+'->'+MATCH_LIST[tmp]);
         words[i] = MATCH_LIST[tmp];
       }
     }
