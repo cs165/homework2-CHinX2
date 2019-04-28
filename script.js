@@ -48,7 +48,29 @@ function freshChoice1(key)
         }
       }
     }
-    else console.log('invalid');
+    else{
+      console.log('check 1:'+key);
+      /* style */
+      var x = document.querySelectorAll('div[data-question-id="one"]');
+      for (i = 0; i < x.length; i++) {
+        if(x[i].getAttribute('data-choice-id') === key)
+        {
+          x[i].querySelectorAll(".checkbox")[0].src = "images/checked.png";
+          x[i].style.backgroundColor = "#cfe3ff";
+          x[i].style.opacity = "1";
+        }
+        else if(x[i].getAttribute('data-choice-id') === answer[0])
+        {
+          x[i].querySelectorAll(".checkbox")[0].src = "images/unchecked.png";
+          x[i].style.backgroundColor = "#f4f4f4";
+          x[i].style.opacity = "0.6";
+        }
+        else{
+          x[i].style.opacity = "0.6";
+        }
+      }
+      answer[0] = key;
+    }
   }
   else{
     console.log('check 1:'+key);
@@ -91,7 +113,29 @@ function freshChoice2(key)
         }
       }
     }
-    else console.log('invalid');
+    else{
+      console.log('check 2:'+key);
+      /* style */
+      var x = document.querySelectorAll('div[data-question-id="two"]');
+      for (i = 0; i < x.length; i++) {
+        if(x[i].getAttribute('data-choice-id') === key)
+        {
+          x[i].querySelectorAll(".checkbox")[0].src = "images/checked.png";
+          x[i].style.backgroundColor = "#cfe3ff";
+          x[i].style.opacity = "1";
+        }
+        else if(x[i].getAttribute('data-choice-id') === answer[1])
+        {
+          x[i].querySelectorAll(".checkbox")[0].src = "images/unchecked.png";
+          x[i].style.backgroundColor = "#f4f4f4";
+          x[i].style.opacity = "0.6";
+        }
+        else{
+          x[i].style.opacity = "0.6";
+        }
+      }
+      answer[1] = key;
+    }
   }
   else{
     console.log('check 2:'+key);
@@ -134,7 +178,29 @@ function freshChoice3(key)
         }
       }
     }
-    else console.log('invalid');
+    else{
+      console.log('check 3:'+key);
+      /* style */
+      var x = document.querySelectorAll('div[data-question-id="three"]');
+      for (i = 0; i < x.length; i++) {
+        if(x[i].getAttribute('data-choice-id') === key)
+        {
+          x[i].querySelectorAll(".checkbox")[0].src = "images/checked.png";
+          x[i].style.backgroundColor = "#cfe3ff";
+          x[i].style.opacity = "1";
+        }
+        else if(x[i].getAttribute('data-choice-id') === answer[2])
+        {
+          x[i].querySelectorAll(".checkbox")[0].src = "images/unchecked.png";
+          x[i].style.backgroundColor = "#f4f4f4";
+          x[i].style.opacity = "0.6";
+        }
+        else{
+          x[i].style.opacity = "0.6";
+        }
+      }
+      answer[2] = key;
+    }
   }
   else{
     console.log('check 3:'+key);
