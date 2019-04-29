@@ -240,44 +240,8 @@ function showAns() {
     console.log('ans:{'+answer[0]+','+answer[1]+','+answer[2]+'}='+ansKey);
     var ans = document.getElementById('answer');
     ans.style.display = "flex";
-    switch(ansKey){
-      case 'blep':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.blep.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.blep.contents;
-        break;
-      case 'burger':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.burger.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.burger.contents;
-        break;
-      case 'cart':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.cart.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.cart.contents;
-        break;
-      case 'dopey':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.dopey.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.dopey.contents;
-        break;
-      case 'happy':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.happy.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.happy.contents
-      break;
-      case 'nerd':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.nerd.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.nerd.contents
-        break;
-      case 'shy':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.shy.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.shy.contents
-        break;
-      case 'sleeping':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.sleeping.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.sleeping.contents
-        break;
-      case 'sleepy':
-        ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP.sleepy.title;
-        ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP.sleepy.contents
-        break;
-    }
+    ans.getElementsByTagName('h1')[0].innerHTML = RESULTS_MAP[ansKey].title;
+    ans.getElementsByTagName('p')[0].innerHTML = RESULTS_MAP[ansKey].contents;
     ans.scrollIntoView();
   }
 }

@@ -14,6 +14,9 @@ const POSITIVE_MESSAGES = [
   'Your life matters.'
 ];
 
+const url-cursor = chrome.runtime.getURL('images/rose-cursor.gif');
+const url-bg = chrome.runtime.getURL('images/sparkle.gif');
+
 chrome.runtime.onConnect.addListener(function(port) {
   port.onMessage.addListener(onMessage);
 });
@@ -26,4 +29,5 @@ function onMessage(gardeningInProgress) {
 
   // If `gardeningInProgress` is true, that means "Start Gardening" was clicked.
   // If `gardeningInProgress` is false, that means "Stop Gardening" was clicked.
+
 }
